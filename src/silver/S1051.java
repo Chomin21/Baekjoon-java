@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 //숫자 정사각형
-public class NumberSquare {
+public class S1051 {
 
 	public static void main(String[] args) throws IOException {
 		
