@@ -17,10 +17,10 @@ public class S15649 {
 		int n = Integer.parseInt(inputs[0]);
 		int m = Integer.parseInt(inputs[1]);
 
-		dfs(n, m, 1, new ArrayList<>());
+		dfs(n, m, new ArrayList<>());
 	}
 
-	public static void dfs(int n, int m, int i, ArrayList<Integer> numList){ // 4 2 1
+	public static void dfs(int n, int m, ArrayList<Integer> numList){ // 4 2 1
 		if(numList.size() == m){
 			// 배열 요소 출력
 			System.out.println(numList.stream()
@@ -33,7 +33,7 @@ public class S15649 {
 		for(int k = 1; k <= n; k++){
 			if(!numList.contains(k)){
 				numList.add(k);
-				dfs(n, m, i + 1, numList);
+				dfs(n, m, numList);
 				numList.remove(numList.size() - 1);
 			}
 		}
